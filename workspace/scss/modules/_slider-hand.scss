@@ -1,0 +1,60 @@
+section.slider-hand {
+    max-width: 1200px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    cursor: all-scroll;
+    background-color: $gray;
+
+    .slider-hand-container {
+        overflow: hidden;
+
+        .slider-hand-inner {
+            position: relative;
+            display: block;
+
+            //@include transition (margin-left .5s ease-out);
+
+            ul.slider-hand-ul {
+                @include flex-box();
+    
+                li.slider-hand-element {
+                    padding: 20px;
+                    height: auto;
+                    background-color: #282c34;
+    
+                    //@include border-radius(5px);
+
+                    .slider-hand-content {
+                        overflow: hidden;
+                        color: white;
+
+                        h2 {
+                            font-size: 25px;
+                            color: $blue;
+                            border-bottom: 1px solid rgba($color: white, $alpha: .2);
+                            padding-bottom: 15px;
+                            margin-bottom: 15px;
+                        }
+
+                        p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            margin-bottom: 15px;
+
+                            &:last-of-type { margin-bottom: 0; }
+                        }
+
+                        img {
+                            width: 100%;
+                            max-width: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
